@@ -6,3 +6,15 @@ id = "D_QulCpuW64rAmEkOY7Oz"
 uri = "file://WhatsApp_Tax_Return_Outreach.xlsx"
 type = "table"
 title = "WhatsApp Tax Return Outreach Sheet"
+
+[[outputs]]
+id = "XerYvA5x4islMx8fKcCYF"
+uri = "file://327_WhatsApp_Message_Variations.csv"
+type = "table"
+title = "327 WhatsApp Message Variations (CSV)"
+
+[[outputs]]
+id = "ulYZp0Kr-XvAVgdFhGp-4"
+uri = "file://327_WhatsApp_Message_Variations.txt"
+type = "text"
+title = "327 WhatsApp Message Variations (TXT)"
