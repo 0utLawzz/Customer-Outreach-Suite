@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "WhatsApp Outreach Dashboard"
+version = "1.0.0"
+id = "artifacts/whatsapp-dashboard"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23097
+
+[services.development]
+run = "pnpm --filter @workspace/whatsapp-dashboard run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/whatsapp-dashboard", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/whatsapp-dashboard/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23097"
+BASE_PATH = "/"
